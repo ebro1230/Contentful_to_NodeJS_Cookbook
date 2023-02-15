@@ -35,6 +35,8 @@ const receips = [
     image: "https://www.delscookingtwist.com/wp-content/uploads/2022/01/Easy-Fluffy-American-Pancakes_1.jpg",
     prepTime: "10 min",
     cookTime: "20 min",
+  },
 ];
+
 
 export default receips;
