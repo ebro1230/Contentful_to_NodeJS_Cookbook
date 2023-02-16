@@ -48,7 +48,6 @@ const Home = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <h1>Team 1's Recipe Blog</h1>
       <Grid
         container
         direction="row"
@@ -61,13 +60,17 @@ const Home = () => {
         ) : recipes.length ? (
           recipes.map((recipe) => {
             return (
-              <Grid item xs={6}>
+              <Grid item xs="auto">
                 <Card
-                  sx={{ maxWidth: 345 }}
+                  sx={{ maxWidth: 345, minWidth: 345, height: 345 }}
                   key={recipe.sys.id}
                   id={recipe.sys.id}
                 >
-                  <CardActionArea onClick={handleOnClick} id={recipe.sys.id}>
+                  <CardActionArea
+                    onClick={handleOnClick}
+                    id={recipe.sys.id}
+                    sx={{ maxWidth: 345, minWidth: 345, height: 345 }}
+                  >
                     <CardMedia
                       component="img"
                       height="140"
