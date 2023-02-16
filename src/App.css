@@ -5,3 +5,8 @@
 .header {
   background-color: rgb(155, 148, 148);
 }
+img {
+  max-width: 600px;
+  max-height: 500px;
+ 
+}
