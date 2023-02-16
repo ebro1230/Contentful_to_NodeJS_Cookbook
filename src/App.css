@@ -5,3 +5,8 @@
 .header {
   background-color: rgb(155, 148, 148);
 }
+.recipeEntries{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

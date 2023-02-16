@@ -50,7 +50,7 @@ const Home = () => {
       ) : recipes.length ? (
         recipes.map((recipe) => {
           return (
-            <>
+            <div className="recipeEntries">
               <Card
                 sx={{ maxWidth: 345 }}
                 key={recipe.sys.id}
@@ -85,7 +85,7 @@ const Home = () => {
                   </CardContent>
                 </CardActionArea>
               </Card>
-            </>
+            </div>
           );
         })
       ) : (
