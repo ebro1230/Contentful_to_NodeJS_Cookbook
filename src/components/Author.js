@@ -6,7 +6,4 @@ const Author = () => {
   );
 }
 
-export default Author
-  < div >
-
-</div >;
+export default Author;
