@@ -19,9 +19,7 @@ const Home = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch(
-      `http://cdn.contentful.com/spaces/${process.env.REACT_APP_CONTENTFUL_SPACE_ID}/entries?access_token=${process.env.REACT_APP_CONTENTFUL_ACCESS_TOKEN}`
-    )
+    fetch(`http://localhost:8000/api/recipes`)
       .then((response) => {
         if (!response.ok) {
           return setError(`HTTP Status Error: ${response.status}`);
@@ -31,7 +29,7 @@ const Home = () => {
       })
       .then((response) => response.json())
       .then((json) => {
-        setRecipes(json.items);
+        setRecipes(json);
       })
       .catch((error) => {
         setError(`${error}`);
@@ -63,38 +61,38 @@ const Home = () => {
               <Grid item xs="auto">
                 <Card
                   sx={{ maxWidth: 345, minWidth: 345, height: 345 }}
-                  key={recipe.sys.id}
-                  id={recipe.sys.id}
+                  key={recipe.recipe_id}
+                  id={recipe.recipe_id}
                 >
                   <CardActionArea
                     onClick={handleOnClick}
-                    id={recipe.sys.id}
+                    id={recipe.recipe_id}
                     sx={{ maxWidth: 345, minWidth: 345, height: 345 }}
                   >
                     <CardMedia
                       component="img"
                       height="140"
-                      image={recipe.fields.imageUrl}
-                      alt={recipe.fields.title}
-                      id={recipe.sys.id}
+                      image={recipe.image_url}
+                      alt={recipe.title}
+                      id={recipe.recipe_id}
                     />
-                    <CardContent id={recipe.sys.id}>
+                    <CardContent id={recipe.recipe_id}>
                       <Typography
                         gutterBottom
                         variant="h5"
                         component="div"
-                        id={recipe.sys.id}
+                        id={recipe.recipe_id}
                       >
-                        {recipe.fields.title}
+                        {recipe.title}
                       </Typography>
                       <Typography
                         variant="body2"
                         color="text.secondary"
-                        id={recipe.sys.id}
+                        id={recipe.recipe_id}
                       >
-                        Prep Time: {recipe.fields.prepTime} min
+                        Prep Time: {recipe.prep_time} min
                         <br />
-                        Cook Time: {recipe.fields.cookTime} min
+                        Cook Time: {recipe.cook_time} min
                       </Typography>
                     </CardContent>
                   </CardActionArea>
