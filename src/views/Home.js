@@ -41,7 +41,7 @@ const Home = () => {
 
   const handleOnClick = (e) => {
     console.log(e.target.id);
-    navigation(`Contentful_to_NodeJS_Cookbook/recipe/${e.target.id}`);
+    navigation(`Whatishappening/recipe/${e.target.id}`);
   };
 
   return (

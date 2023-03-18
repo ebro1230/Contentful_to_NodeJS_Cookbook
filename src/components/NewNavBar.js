@@ -57,7 +57,7 @@ function DrawerAppBar(props) {
       <List>
         <ListItem key="Home" disablePadding>
           <ListItemButton sx={{ textAlign: "center" }}>
-            <NavLink to="Contentful_to_NodeJS_Cookbook/">
+            <NavLink to="Whatishappening/">
               <ListItemText
                 className="symbol"
                 primary={
@@ -74,9 +74,7 @@ function DrawerAppBar(props) {
         {recipes.map((recipe) => (
           <ListItem key={recipe.recipe_id} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
-              <NavLink
-                to={`Contentful_to_NodeJS_Cookbook/recipe/${recipe.recipe_id}`}
-              >
+              <NavLink to={`Whatishappening/recipe/${recipe.recipe_id}`}>
                 <ListItemText
                   className="symbol"
                   primary={
@@ -121,7 +119,7 @@ function DrawerAppBar(props) {
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             <Button key="Home" sx={{ color: "#fff" }}>
-              <NavLink to="Contentful_to_NodeJS_Cookbook/">
+              <NavLink to="Whatishappening/">
                 {
                   <Avatar
                     alt="Home Symbol"
@@ -134,9 +132,7 @@ function DrawerAppBar(props) {
 
             {recipes.map((recipe) => (
               <Button key={recipe.recipe_id} sx={{ color: "#fff" }}>
-                <NavLink
-                  to={`Contentful_to_NodeJS_Cookbook/recipe/${recipe.recipe_id}`}
-                >
+                <NavLink to={`Whatishappening/recipe/${recipe.recipe_id}`}>
                   {
                     <Avatar
                       alt="Food Symbol"
