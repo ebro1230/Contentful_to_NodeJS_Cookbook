@@ -6,6 +6,10 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
+import { styled } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import Paper from "@mui/material/Paper";
+import Grid from "@mui/material/Grid";
 
 const Home = () => {
   const [recipes, setRecipes] = useState([]);
@@ -43,55 +47,66 @@ const Home = () => {
   };
 
   return (
-    <div>
-      <h1>Team 1's Recipe Blog</h1>
-      {isLoading ? (
-        <LoadingIndicator />
-      ) : recipes.length ? (
-        recipes.map((recipe) => {
-          return (
-            <>
-              <Card
-                sx={{ maxWidth: 345 }}
-                key={recipe.sys.id}
-                id={recipe.sys.id}
-              >
-                <CardActionArea onClick={handleOnClick} id={recipe.sys.id}>
-                  <CardMedia
-                    component="img"
-                    height="140"
-                    image={recipe.fields.imageUrl}
-                    alt={recipe.fields.title}
+    <Box sx={{ flexGrow: 1 }}>
+      <Grid
+        container
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+        spacing={2}
+      >
+        {isLoading ? (
+          <LoadingIndicator />
+        ) : recipes.length ? (
+          recipes.map((recipe) => {
+            return (
+              <Grid item xs="auto">
+                <Card
+                  sx={{ maxWidth: 345, minWidth: 345, height: 345 }}
+                  key={recipe.sys.id}
+                  id={recipe.sys.id}
+                >
+                  <CardActionArea
+                    onClick={handleOnClick}
                     id={recipe.sys.id}
-                  />
-                  <CardContent id={recipe.sys.id}>
-                    <Typography
-                      gutterBottom
-                      variant="h5"
-                      component="div"
+                    sx={{ maxWidth: 345, minWidth: 345, height: 345 }}
+                  >
+                    <CardMedia
+                      component="img"
+                      height="140"
+                      image={recipe.fields.imageUrl}
+                      alt={recipe.fields.title}
                       id={recipe.sys.id}
-                    >
-                      {recipe.fields.title}
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      color="text.secondary"
-                      id={recipe.sys.id}
-                    >
-                      Prep Time: {recipe.fields.prepTime} min
-                      <br />
-                      Cook Time: {recipe.fields.cookTime} min
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-              </Card>
-            </>
-          );
-        })
-      ) : (
-        error
-      )}
-    </div>
+                    />
+                    <CardContent id={recipe.sys.id}>
+                      <Typography
+                        gutterBottom
+                        variant="h5"
+                        component="div"
+                        id={recipe.sys.id}
+                      >
+                        {recipe.fields.title}
+                      </Typography>
+                      <Typography
+                        variant="body2"
+                        color="text.secondary"
+                        id={recipe.sys.id}
+                      >
+                        Prep Time: {recipe.fields.prepTime} min
+                        <br />
+                        Cook Time: {recipe.fields.cookTime} min
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </Card>
+              </Grid>
+            );
+          })
+        ) : (
+          error
+        )}
+      </Grid>
+    </Box>
   );
 };
 
