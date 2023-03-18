@@ -11,11 +11,8 @@ function App() {
     <div className="App">
       <NewNavBar />
       <Routes>
-        <Route path="Contentful_to_NodeJS_Cookbook/" element={<Home />} />
-        <Route
-          path="Contentful_to_NodeJS_Cookbook/recipe/:recipeId"
-          element={<Recipe />}
-        />
+        <Route path="/" element={<Home />} />
+        <Route path="/recipe/:recipeId" element={<Recipe />} />
       </Routes>
     </div>
   );
