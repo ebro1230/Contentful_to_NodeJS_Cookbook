@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.css-16lloyr-MuiBottomNavigation-root{
+  background-color: rgb(155, 148, 148) !important;
+}
+
+.css-1d4vqq0-MuiButtonBase-root-MuiListItemButton-root{
+  justify-content: center !important;
+}
