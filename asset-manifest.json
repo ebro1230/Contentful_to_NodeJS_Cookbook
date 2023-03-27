@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "./static/css/main.3e6b65f0.css",
-    "main.js": "./static/js/main.9a162642.js",
-    "static/js/787.28cb0dcd.chunk.js": "./static/js/787.28cb0dcd.chunk.js",
-    "index.html": "./index.html",
-    "main.3e6b65f0.css.map": "./static/css/main.3e6b65f0.css.map",
-    "main.9a162642.js.map": "./static/js/main.9a162642.js.map",
-    "787.28cb0dcd.chunk.js.map": "./static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "/Contentful_to_NodeJS_Cookbook/static/css/main.3e6b65f0.css",
+    "main.js": "/Contentful_to_NodeJS_Cookbook/static/js/main.d2e805f2.js",
+    "static/js/787.28cb0dcd.chunk.js": "/Contentful_to_NodeJS_Cookbook/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/Contentful_to_NodeJS_Cookbook/index.html",
+    "main.3e6b65f0.css.map": "/Contentful_to_NodeJS_Cookbook/static/css/main.3e6b65f0.css.map",
+    "main.d2e805f2.js.map": "/Contentful_to_NodeJS_Cookbook/static/js/main.d2e805f2.js.map",
+    "787.28cb0dcd.chunk.js.map": "/Contentful_to_NodeJS_Cookbook/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3e6b65f0.css",
-    "static/js/main.9a162642.js"
+    "static/js/main.d2e805f2.js"
   ]
 }
