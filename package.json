@@ -1,6 +1,6 @@
 {
-  "homepage": "https://ebro1230.github.io/Contentful_to_NodeJS_Cookbook/",
-  "name": "Contentful_to_NodeJS_Cookbook",
+  "homepage": "./",
+  "name": "my-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
