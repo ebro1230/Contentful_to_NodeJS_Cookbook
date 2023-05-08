@@ -25,7 +25,7 @@ function DrawerAppBar(props) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:8000/api/recipes`)
+    fetch(`${process.env.REACT_APP_BACKEND_URL}api/recipes`)
       .then((response) => {
         if (!response.ok) {
           return setError(`HTTP Status Error: ${response.status}`);

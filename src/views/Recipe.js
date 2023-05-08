@@ -31,7 +31,7 @@ const Recipe = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch(`http://localhost:8000/api/recipes/${recipeId}`)
+    fetch(`${process.env.REACT_APP_BACKEND_URL}api/recipes/${recipeId}`)
       .then((response) => {
         if (!response.ok) {
           return setError(`HTTP Status Error: ${response.status}`);
