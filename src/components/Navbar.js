@@ -9,7 +9,12 @@ const Navbar = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_BACKEND_URL}api/recipes`)
+    fetch(`${process.env.REACT_APP_BACKEND_URL}api/recipes`, {
+      mode: "cors",
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+      },
+    })
       .then((response) => {
         if (!response.ok) {
           return setError(`HTTP Status Error: ${response.status}`);

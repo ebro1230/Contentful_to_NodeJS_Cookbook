@@ -21,7 +21,7 @@ const Home = () => {
     setIsLoading(true);
     fetch(`${process.env.REACT_APP_BACKEND_URL}api/recipes`, {
       mode: "cors",
-      header: {
+      headers: {
         "Access-Control-Allow-Origin": "*",
       },
     })
