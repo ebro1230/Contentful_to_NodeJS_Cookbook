@@ -19,7 +19,7 @@ const Home = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch(`${process.env.REACT_APP_BACKEND_URL}api/recipes`)
+    fetch(`${process.env.REACT_APP_BACKEND_URL}api/recipes`, { mode: "cors" })
       .then((response) => {
         if (!response.ok) {
           return setError(`HTTP Status Error: ${response.status}`);
