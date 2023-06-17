@@ -10,6 +10,8 @@ import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
+import { Modal } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Home = () => {
   const [recipes, setRecipes] = useState([]);
@@ -54,7 +56,19 @@ const Home = () => {
         spacing={2}
       >
         {isLoading ? (
-          <LoadingIndicator />
+          <>
+            <LoadingIndicator />
+            <Modal show={true} centered>
+              <Modal.Header>
+                <Modal.Title>
+                  I am using the free backend hosting on Render.com. It takes
+                  ~1-2 minutes for the free server to spin back up if it has
+                  been inactive for more than 15 minutes. Thanks for your
+                  patience!
+                </Modal.Title>
+              </Modal.Header>
+            </Modal>
+          </>
         ) : recipes.length ? (
           recipes.map((recipe) => {
             return (
